@@ -1,0 +1,47 @@
+body {
+    background-color: #bbbbbb;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.under-construction {
+    display: flex;
+    flex-direction: column;
+}
+
+.under-construction img {
+    padding: 1em;
+}
+
+/* ----------------- */
+/* Bottom Navigation */
+/* ----------------- */
+
+.bottom-anker {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 7px;
+    left: 0;
+    bottom: 0;
+
+    text-align: center;
+
+    color: white;
+    background-color: gray;
+}
+
+.arrow {
+    height: 1.5em;
+    transform: translateY(0.3em);
+}
+
+.mirror {
+    transform: scale(-1, 1) translateY(0.3em);
+}
