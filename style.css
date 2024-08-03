@@ -17,6 +17,43 @@ main {
     align-items: center;
 }
 
+.text {
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    font-size: 2em;
+}
+
+/* ------------ */
+/* Ferris Popup */
+/* ------------ */
+
+#ferris-popup-text {
+    display: inline-block;
+}
+
+#ferris-popup-text:hover {
+    padding: 0;
+
+    color: #b7410e;
+}
+
+#ferris-image {
+    position: absolute;
+    display: none;
+
+    z-index: 10;
+    height: 5em;
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(-27px) translateX(-42px) rotate(30deg);
+    user-select: none;
+    -moz-user-select: none;;
+    -webkit-user-drag: none;
+}
+
 /* -------------------- */
 /* Water animation Text */
 /* -------------------- */
