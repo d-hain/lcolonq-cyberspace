@@ -18,6 +18,10 @@ main {
     align-items: center;
 }
 
+span {
+    display: inline-block;
+}
+
 .text {
     padding-top: 2em;
     padding-left: 2em;
@@ -26,13 +30,14 @@ main {
     font-size: 2em;
 }
 
+nav span {
+    font-style: italic;
+    font-weight: 900;
+}
+
 /* ------------ */
 /* Ferris Popup */
 /* ------------ */
-
-#ferris-popup-text {
-    display: inline-block;
-}
 
 #ferris-popup-text:hover {
     padding: 0;
@@ -40,19 +45,30 @@ main {
     color: #b7410e;
 }
 
+#ferris-popup-text:hover + #ferris-image {
+    display: block;
+
+    opacity: 1;
+    transform: translateY(-27px) translateX(-42px) rotate(30deg);
+}
+
+/* TODO: c animation */
+
 #ferris-image {
     position: absolute;
-    display: none;
 
     z-index: 10;
-    height: 5em;
+    width: 7em;
     left: 0;
     bottom: 0;
 
-    transform: translateY(-27px) translateX(-42px) rotate(30deg);
+    opacity: 0;
+    transform: translateX(-100%);
     user-select: none;
-    -moz-user-select: none;;
+    -moz-user-select: none;
     -webkit-user-drag: none;
+
+    transition: opacity 1s, transform 1s;
 }
 
 /* -------------------- */
