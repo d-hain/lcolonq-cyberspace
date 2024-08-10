@@ -22,6 +22,11 @@ span {
     display: inline-block;
 }
 
+nav span {
+    font-style: italic;
+    font-weight: 900;
+}
+
 .text {
     padding-top: 2em;
     padding-left: 2em;
@@ -30,9 +35,35 @@ span {
     font-size: 2em;
 }
 
-nav span {
-    font-style: italic;
-    font-weight: 900;
+.not-selectable {
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* ------------ */
+/* C Book Popup */
+/* ------------ */
+
+#c-popup-text:hover {
+    color: blue;
+}
+
+#c-popup-text:hover + #c-book-image {
+    transform: translateX(115vw) rotate(69deg);
+}
+
+#c-book-image {
+    position: absolute;
+
+    z-index: 10;
+    width: 10em;
+    left: 0;
+
+    transform: translateX(-20em) rotate(-69deg);
+
+    transition: transform 2s;
 }
 
 /* ------------ */
@@ -64,9 +95,6 @@ nav span {
 
     opacity: 0;
     transform: translateX(-100%);
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
 
     transition: opacity 1s, transform 1s;
 }
