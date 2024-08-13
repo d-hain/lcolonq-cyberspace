@@ -9,6 +9,7 @@
 
     <link rel="icon" href="./doce.png">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="confetti.js" defer></script>
 </head>
 
 <body>
@@ -57,24 +58,47 @@
         <!-- Text -->
         <div class="text">
             hello there,
-            i am DocE or DocEys and this is my cyberspace. <br />
+            i am
+            <span class="orange">
+                DocE
+            </span>
+            or
+            <span class="orange">
+                DocEys
+            </span>
+            and this is my cyberspace. <br />
             i program in
-            <!-- TODO: c language book with glasses animation from jdh -->
+
+            <!-- C book with glasses animation inspired by jdh -->
             <span id="c-popup-text">
                 c
             </span>,
-            <img id="c-book-image" class="not-selectable" src="./assets/the-c-programming-language-book_sunglasses_jdh-inspired.png">
+            <img id="c-book-image" class="not-selectable"
+                src="./assets/the-c-programming-language-book_sunglasses_jdh-inspired.png">
+
             <!-- Ferris pops up in the corner on hover -->
             <span id="ferris-popup-text">
                 rust
             </span>,
             <img id="ferris-image" class="not-selectable" src="./assets/ferris.svg">
+
             and sometimes also
+
             <!-- TODO: make animation on hover idk -->
             javascript.
-            <!-- TODO: css cool ausschauen lassen -->
-            but my favourite programming language has to be css. <br />
+
+            but my favourite programming language has to be
+            <span id="css-text">
+                css
+                <canvas id="confetti-canvas" class="not-selectable"></canvas>
+            </span>.
+            <div id="css-logo-trophy" class="not-selectable">
+                <img id="css-logo" class="not-selectable" src="./assets/css-logo.png">
+                <img id="css-trophy" class="not-selectable" src="./assets/nr-1-trophy.png">
+            </div>
+            <br />
             you can glaze at my genious page or explore the ring further
+
             <!-- TODO: make arrow to the bottom animation -->
             over here.
         </div>

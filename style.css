@@ -22,12 +22,21 @@ span {
     display: inline-block;
 }
 
+nav {
+    z-index: 12;
+}
+
 nav span {
     font-style: italic;
     font-weight: 900;
 }
 
+.orange {
+    color: orangered;
+}
+
 .text {
+    max-width: 32em;
     padding-top: 2em;
     padding-left: 2em;
     padding-right: 2em;
@@ -40,6 +49,66 @@ nav span {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
+}
+
+/* --------------------------- */
+/* CSS text and logo animation */
+/* --------------------------- */
+
+#css-text {
+    color: #2965f1;
+}
+
+#css-text:hover {
+    text-transform: uppercase;
+}
+
+#css-text:hover + #css-logo-trophy {
+    bottom: 0;
+}
+
+#css-text:hover #confetti-canvas {
+    top: 0;
+}
+
+#css-logo-trophy {
+    position: absolute;
+
+    z-index: 13;
+    width: 20em;
+    height: 24em;
+    bottom: -100%;
+
+    /* Center element */
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#css-logo {
+    position: absolute;
+
+    width: 80%;
+    left: 2em;
+
+    transform: rotate(13deg);
+}
+
+#css-trophy {
+    position: absolute;
+
+    width: 100%;
+    top: 5em;
+}
+
+#confetti-canvas {
+    position: absolute;
+
+    left: 0;
+    top: -100%;
+
+    z-index: 11;
 }
 
 /* ------------ */
