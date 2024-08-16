@@ -24,11 +24,11 @@ span {
 
 nav {
     z-index: 12;
-}
 
-nav span {
-    font-style: italic;
-    font-weight: 900;
+    & span {
+        font-style: italic;
+        font-weight: 900;
+    }
 }
 
 .orange {
@@ -57,18 +57,18 @@ nav span {
 
 #css-text {
     color: #2965f1;
-}
 
-#css-text:hover {
-    text-transform: uppercase;
-}
+    &:hover {
+        text-transform: uppercase;
 
-#css-text:hover + #css-logo-trophy {
-    bottom: 0;
-}
+        & + #css-logo-trophy {
+            bottom: 0;
+        }
 
-#css-text:hover #confetti-canvas {
-    top: 0;
+        & #confetti-canvas {
+            top: 0;
+        }
+    }
 }
 
 #css-logo-trophy {
@@ -117,10 +117,10 @@ nav span {
 
 #c-popup-text:hover {
     color: blue;
-}
 
-#c-popup-text:hover + #c-book-image {
-    transform: translateX(115vw) rotate(69deg);
+    & + #c-book-image {
+        transform: translateX(115vw) rotate(69deg);
+    }
 }
 
 #c-book-image {
@@ -143,21 +143,19 @@ nav span {
     padding: 0;
 
     color: #b7410e;
+
+    & + #ferris-image {
+        display: block;
+
+        opacity: 1;
+        transform: translateY(-27px) translateX(-42px) rotate(30deg);
+    }
 }
-
-#ferris-popup-text:hover + #ferris-image {
-    display: block;
-
-    opacity: 1;
-    transform: translateY(-27px) translateX(-42px) rotate(30deg);
-}
-
-/* TODO: c animation */
 
 #ferris-image {
     position: absolute;
 
-    z-index: 10;
+    z-index: 13;
     width: 7em;
     left: 0;
     bottom: 0;
@@ -187,17 +185,17 @@ nav span {
 
 .clonk h2 {
     font-size: 5em;
-}
 
-.clonk h2:nth-child(1) {
-    color: transparent;
-    -webkit-text-stroke: 2px #03a9f4;
-    transform: translateY(1.98em);
-}
+    &:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+        transform: translateY(1.98em);
+    }
 
-.clonk h2:nth-child(2) {
-    color: #03a9f4;
-    animation: water 4s ease-in-out infinite;
+    &:nth-child(2) {
+        color: #03a9f4;
+        animation: water 4s ease-in-out infinite;
+    }
 }
 
 @keyframes water {
@@ -318,16 +316,16 @@ nav span {
 
     font-size: 3.5em;
     font-weight: 700;
-}
 
-.wavy-rainbow-text span {
-    display: inline-block;
-    position: relative;
+    & span {
+        display: inline-block;
+        position: relative;
 
-    color: white;
+        color: white;
 
-    animation: wavy-rainbow-text 3.69s infinite;
-    animation-delay: calc(.1s * var(--i));
+        animation: wavy-rainbow-text 3.69s infinite;
+        animation-delay: calc(.1s * var(--i));
+    }
 }
 
 @keyframes wavy-rainbow-text {
