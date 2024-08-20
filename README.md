@@ -1,4 +1,4 @@
-# My Cyberspace over on [pub.colonq.coomputer](https://pub.colonq.computer/~doce)
+# My Cyberspace over on [pub.colonq.computer](https://pub.colonq.computer/~doce)
 
 ## Running locally
 
