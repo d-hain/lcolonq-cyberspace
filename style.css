@@ -61,6 +61,29 @@ nav span {
     -webkit-user-drag: none;
 }
 
+/* ---------------------- */
+/* Javascript crossed out */
+/* ---------------------- */
+
+#javascript-text {
+    position: relative;
+
+    color: gold;
+}
+
+#javascript-text:hover #javascript-cross {
+    visibility: visible;
+}
+
+#javascript-cross {
+    position: absolute;
+    visibility: hidden;
+
+    height: 100%;
+
+    transform: scaleX(500%) translateX(-55%);
+}
+
 /* --------------------------- */
 /* CSS text and logo animation */
 /* --------------------------- */
@@ -125,7 +148,7 @@ nav span {
 /* C Book Popup */
 /* ------------ */
 
-#c-popup-text:hover {
+#c-popup-text {
     color: blue;
 }
 
@@ -149,9 +172,7 @@ nav span {
 /* Ferris Popup */
 /* ------------ */
 
-#ferris-popup-text:hover {
-    padding: 0;
-
+#ferris-popup-text {
     color: #b7410e;
 }
 
