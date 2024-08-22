@@ -45,7 +45,18 @@ nav span {
     color: orangered;
 }
 
-.text {
+.not-selectable {
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+#text {
     max-width: 32em;
     padding-top: 2em;
     padding-left: 2em;
@@ -54,11 +65,86 @@ nav span {
     font-size: 1.69em;
 }
 
-.not-selectable {
-    pointer-events: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
+/* #pages { */
+/*     /1* TODO: make some more pages on here *1/ */
+/* } */
+
+/* ---------- */
+/* Link lists */
+/* ---------- */
+
+#links {
+    padding-inline-start: 0;
+}
+
+#links li {
+    padding-bottom: 0.3em;
+
+    list-style-type: none;
+}
+
+#links li:before {
+    display: inline-block;
+    content: "";
+
+    height: 1.2em;
+    width: 1.2em;
+    padding-right: 0.5em;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transform: translateY(0.142em);
+}
+
+#links li[clonk]:before {
+    clip-path: circle(42% at 32%);
+    background-image: url("assets/clonk-pfp.jpg");
+    background-size: 80%;
+}
+
+#links li[website]:before {
+    background-image: url("assets/seesORsoos_sad_no-bg.png");
+}
+
+#links li[github]:before {
+    background-image: url("assets/github-mark.svg");
+}
+
+#links li[twitter]:before {
+    background-image: url("assets/twitter.svg");
+}
+
+/* ------------ */
+/* Link Styling */
+/* ------------ */
+
+.link a {
+    display: inline-block;
+
+    overflow: hidden;
+    text-decoration: none;
+    color: mediumorchid;
+
+    transform: translateY(0.25em);
+}
+
+.link a span {
+    transition: 0.3s;
+}
+
+.link a span:before {
+    position: absolute;
+    content: attr(data-hover);
+
+    top: 100%;
+
+    font-weight: 700;
+    color: mediumvioletred;
+}
+
+.link a:hover span, .link a:focus span {
+    transform: translateY(-100%);
 }
 
 /* ---------------------- */
@@ -148,11 +234,15 @@ nav span {
 /* C Book Popup */
 /* ------------ */
 
-#c-popup-text {
+#c-text {
     color: blue;
 }
 
-#c-popup-text:hover + #c-book-image {
+#c-text:hover {
+    text-transform: uppercase;
+}
+
+#c-text:hover + #c-book-image {
     transform: translateX(115vw) rotate(69deg);
 }
 
@@ -172,11 +262,11 @@ nav span {
 /* Ferris Popup */
 /* ------------ */
 
-#ferris-popup-text {
+#ferris-text {
     color: #b7410e;
 }
 
-#ferris-popup-text:hover + #ferris-image {
+#ferris-text:hover + #ferris-image {
     display: block;
 
     opacity: 1;
@@ -201,11 +291,11 @@ nav span {
 /* Water animation Text */
 /* -------------------- */
 
-.clonk {
+#clonk {
     margin-top: 7em;
 }
 
-.clonk h2 {
+#clonk h2 {
     position: absolute;
 
     font-size: 4em;
@@ -213,23 +303,17 @@ nav span {
     transform: translateY(-50%) translateX(3%);
 }
 
-/* * { */
-/*     border-width: 2px; */
-/*     border-color: red; */
-/*     border-style: solid; */
-/* } */
-
-.clonk h2:nth-child(1) {
+#clonk h2:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 2px #03a9f4;
 }
 
-.clonk h2:nth-child(2) {
+#clonk h2:nth-child(2) {
     color: #03a9f4;
     animation: water 4s ease-in-out infinite;
 }
 
-.clonk-bg {
+#clonk-bg {
     z-index: -1;
 
     width: 46em;
@@ -403,7 +487,7 @@ nav span {
 /* Bottom Navigation */
 /* ----------------- */
 
-.bottom-anker {
+#bottom-anker {
     position: fixed;
     display: flex;
     justify-content: space-between;

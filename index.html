@@ -57,7 +57,7 @@
         </div>
 
         <!-- Text -->
-        <div class="text">
+        <div id="text">
             hello there,
             i am
             <span class="orange">
@@ -71,14 +71,14 @@
             i program in
 
             <!-- C book with glasses animation inspired by jdh -->
-            <span id="c-popup-text">
+            <span id="c-text">
                 c
             </span>,
             <img id="c-book-image" class="not-selectable"
                 src="assets/the-c-programming-language-book_sunglasses_jdh-inspired.png">
 
             <!-- Ferris pops up in the corner on hover -->
-            <span id="ferris-popup-text">
+            <span id="ferris-text">
                 rust
             </span>,
             <img id="ferris-image" class="not-selectable" src="assets/ferris.svg">
@@ -97,29 +97,64 @@
             <span id="css-text">
                 css
                 <canvas id="confetti-canvas" class="not-selectable"></canvas>
+                <audio id="css-audio" src="assets/yippie.mp3"></audio>
             </span>.
             <div id="css-logo-trophy" class="not-selectable">
                 <img id="css-logo" class="not-selectable" src="assets/css-logo.png">
                 <img id="css-trophy" class="not-selectable" src="assets/nr-1-trophy.png">
             </div>
             <br />
-            you can glaze at my genious page or explore the ring further
+            you can stare at my genious page or explore the ring
+            further with the arrows at the bottom of the page.
 
-            <!-- TODO: make arrow to the bottom animation -->
-            over here.
+            <div class="left">
+                <!-- /* TODO: make some more pages on here */ -->
+                <ul id="pages">
+                    <li style="font-size: 0.5em;">I'll make more stuff on here. trust me</li>
+                </ul>
+
+                <ul id="links">
+                    <li clonk class="link">
+                        <a href="https://colonq.computer" target="_blank">
+                            <span data-hover="Lord of the computer Clonk">
+                                Lord of the computer Clonk
+                            </span>
+                        </a>
+                    </li>
+                    <li website class="link">
+                        <a href="https://doce.ddns.net" target="_blank">
+                            <span data-hover="My actual website">
+                                My actual website
+                            </span>
+                        </a>
+                    </li>
+                    <li github class="link">
+                        <a href="https://github.com/" target="_blank">
+                            <span data-hover="My GitHub">
+                                My GitHub
+                            </span>
+                        </a>
+                    </li>
+                    <li twitter class="link">
+                        <a href="https://twitter.com/doceyss" target="_blank">
+                            <span data-hover="My Twitter">
+                                My Twitter
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- TODO: more stuff to fill the page -->
-
         <!-- all hail CLONK -->
-        <div class="clonk">
+        <div id="clonk">
             <h2>all hail the CLONK</h2>
             <h2>all hail the CLONK</h2>
-            <div class="clonk-bg">&nbsp;</div>
+            <div id="clonk-bg">&nbsp;</div>
         </div>
 
         <!-- RINGBEARER -->
-        <nav class="bottom-anker">
+        <nav id="bottom-anker">
             <a href="https://pub.colonq.computer/~llll/cgi-bin/ring?me=doce&offset=-1">
                 <img class="arrow mirror" src="./assets/arrow.png">
             </a>
