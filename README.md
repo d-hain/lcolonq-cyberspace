@@ -2,8 +2,15 @@
 
 ## Running locally
 
-I use vite as my devserver. Just run:
+Just use Nix and run:
 ```shell
-npm run dev
+nix develop
 ```
-to start it and open https://localhost:5173/index.html
+
+Or with python directly:
+```shell
+python3 -m http.server
+```
+
+And then open the Port it says locally.
+Likely [localhost:8000](http://localhost:8000).
